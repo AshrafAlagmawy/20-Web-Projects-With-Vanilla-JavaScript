@@ -116,4 +116,8 @@ h2 {
   .container {
     width: 33rem;
   }
+
+  .form {
+    padding: 3rem 1rem;
+  }
 }
