@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+:root {
+  --white-color: #fff;
+  --gray-color: #777;
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Font size = 1rem = 10px = 62.5% of 16px */
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f9fafb;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 40rem;
+  background-color: var(--white-color);
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+}
+
+.form {
+  padding: 3rem 4rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.form-control label {
+  font-size: 1.6rem;
+  color: var(--gray-color);
+  text-transform: capitalize;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-control input {
+  font-size: 1.4rem;
+  display: block;
+  width: 100%;
+  border: 0.2rem solid #f0f0f0;
+  border-radius: 0.4rem;
+  padding: 1rem;
+}
+
+.form-control input:focus {
+  outline: none;
+  border-color: var(--gray-color);
+}
+
+.form-control.success input {
+  border-color: var(--success-color);
+}
+
+.form-control.error input {
+  border-color: var(--error-color);
+}
+
+.form-control small {
+  font-size: 1.4rem;
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form button {
+  font-size: 1.6rem;
+  background-color: #3498db;
+  color: var(--white-color);
+  border: 0.2rem solid #3498db;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  display: block;
+  padding: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 25em) {
+  html {
+    font-size: 60%;
+  }
+
+  .container {
+    width: 33rem;
+  }
+}
